@@ -59,9 +59,9 @@ buttonMultiplicatorElement.addEventListener("click", () => {
     if (count >= price) {
         changeMultiplicator(1)
         changeCount(-price)
-        sendmessage("Good vous avez acheter le multiplicateur")
+        sendmessage("Good vous avez acheté le multiplicateur")
     } else {
-        sendmessage("Vous n'avez pas asser de carotte")
+        sendmessage("Vous n'avez pas assez de carottes")
     }
 })
 
@@ -71,16 +71,16 @@ buttonAutoclickElement.addEventListener("click", () => {
     if (count >= price) {
         changePerSecond(1)
         changeCount(-price)
-        sendmessage("Good vous avez acheter le auto click")
+        sendmessage("Good vous avez acheté le auto click")
     } else {
-        sendmessage("Vous n'avez pas asser de carotte")
+        sendmessage("Vous n'avez pas assez de carottes")
     }
 })
 
 buttonBonusElement.addEventListener("click", () => {
     if (count >= bonusPrice) {
         changeCount(-bonusPrice)
-        sendmessage("Good vous avez acheter le bonus")
+        sendmessage("Good vous avez acheté le bonus")
 
         isBonusActive = true
         bonusTimer = 30
@@ -93,7 +93,7 @@ buttonBonusElement.addEventListener("click", () => {
             }
         }, 1000)
     } else {
-        sendmessage("Vous n'avez pas asser de carotte")
+        sendmessage("Vous n'avez pas assez de carottes")
     }
 })
 
