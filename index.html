@@ -4,27 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Cookie Clicker</title>
 </head>
 <body>
-    <p id="count">0 Carotte</p>
-    <p id="multiplicator">x1</p>
-    <p id="bonusTimer">00</p>
-    <p id="perSecond">0 Carotte par seconde</p>
-    <p id="message"></p>
-    <button id="lapin">
-        <img src="assets/img/pierre2.png" alt="Pierre Lapin" width="1239" height="2477" style="width: 200px;height: auto">
-    </button>
-    <button id="multiplicatorButton">
-        Multiplicateur : 50 carottes
-    </button>
-    <button id="autoclickButton">
-        AutoClick : 250 carottes
-    </button>
-    <button id="bonusButton">
-        Bonus : 2500 carottes
-    </button>
+    <div class="all">
+        <div class="pinou">
+            <button id="lapin">
+                <img src="assets/img/pierre2.png" alt="Pierre Lapin" width="1239" height="2477">
+            </button>
+        </div>
 
-    <script src="assets/js/script.js"></script>
+        <div class="divPanneau">
+            <p id="count">0 Carotte</p>
+            <p id="multiplicator">x1</p>
+            <p id="bonusTimer">00</p>
+            <p id="perSecond">0 Carotte par seconde</p>
+            <p id="message"></p>
+            
+            <button id="multiplicatorButton">
+                Multiplicateur : 50 carottes
+            </button>
+            <button id="autoclickButton">
+                AutoClick : 250 carottes
+            </button>
+            <button id="bonusButton">
+                Bonus : 2500 carottes
+            </button>
+            <img src="/assets/img/panneau.png" class="panneau">
+        </div>
+    </div>
+
+    
+    
+    <!--<img src="/assets/img/encadrement.png" class="frame">
+    
+    <script src="assets/js/script.js"></script>-->
 </body>
 </html>
