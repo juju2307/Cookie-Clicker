@@ -18,4 +18,4 @@ Création d'un jeu de cookie-clicker en groupe (Elisandre, Adrien, Gaelle et moi
 * Le "bonus" permet au joueur d'augmenter son score de 200% par clic pendant 30 secondes. Une minuterie est également visible pour permettre à l'utilisateur de visualiser le temps restant.
 
 ## Comment avons-nous procéder?
-Nous nous sommes mis d'accord sur le thème du jeu. Adrien a efectué le code JS. Gael a fait le Html et a choisi les décors du jeu. Elisandre et Julie ont fait le css et trouver les images du jeu.
+Nous nous sommes mis d'accord sur le thème du jeu. Adrien a efectué le code JS. Gael a fait le Html et a choisi les décors du jeu. Elisandre et Julie ont fait le css et trouver les images.
