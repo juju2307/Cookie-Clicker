@@ -14,14 +14,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url(/assets/img/encadrement.png);
+  background-image: url(../img/encadrement.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 body {
-  background-image: url(/assets/img/fond.jpg);
+  background-image: url(../img/fond.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
