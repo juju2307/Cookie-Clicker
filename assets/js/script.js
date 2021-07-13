@@ -18,6 +18,7 @@ var buttonAutoclickElement = document.getElementById("autoclickButton")
 var buttonBonusElement = document.getElementById("bonusButton")
 var multiplicatorLvlElement = document.getElementById("multiplicatorlvl")
 var autoclickLvlElement = document.getElementById("autoclicklvl")
+var crotteimgElement = document.getElementById("crotteimg")
 
 function initElement() {
     countElement.innerText = count
@@ -50,6 +51,18 @@ function changeCount(increment) {
     count += increment
     countElement.innerText = count
     localStorage.setItem("clicker_count", count)
+
+    if (count <= 5000) {
+        crotteimgElement.src = "assets/img/stade-1.png"
+    } else if (count <= 15000) {
+        crotteimgElement.src = "assets/img/stade-2.png"
+    } else if (count <= 50000) {
+        crotteimgElement.src = "assets/img/stade-3.png"
+    } else if (count <= 100000) {
+        crotteimgElement.src = "assets/img/stade-4.png"
+    } else {
+        crotteimgElement.src = "assets/img/stade-5.png"
+    }
 }
 
 function changeMultiplicator(value) {
