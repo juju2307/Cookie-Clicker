@@ -19,35 +19,38 @@ var buttonBonusElement = document.getElementById("bonusButton")
 var multiplicatorLvlElement = document.getElementById("multiplicatorlvl")
 var autoclickLvlElement = document.getElementById("autoclicklvl")
 var crotteimgElement = document.getElementById("crotteimg")
+var buttonSoundElement = document.getElementById("buttonSound")
+var sound = false
+var myAudio = document.getElementById("audio1");
+myAudio.volume = 0.05;
 
 
 function sonTrue() {
-    var sonVrai = new Audio('assets/sound/enoughMoney.mp3')
-    sonVrai.volume = 0.05
-    return sonVrai.play()
+    if (sound) {
+        var sonVrai = new Audio('assets/sound/enoughMoney.mp3')
+        sonVrai.volume = 0.05
+        return sonVrai.play()
+    }
 }
 
 function eat() {
-    var omNom = new Audio('assets/sound/eat.mp3')
-    omNom.volume = 0.05
-    return omNom.play()
+    if (sound) {
+        var omNom = new Audio('assets/sound/eat.mp3')
+        omNom.volume = 0.05
+        return omNom.play()
+    }
 }
 
 function sonFalse() {
-    var sonFaux = new Audio('assets/sound/notEnough.mp3')
-    sonFaux.volume = 0.05
-    return sonFaux.play()
-}
-
-function setHalfVolume() {
-    var myAudio = document.getElementById("audio1");  
-    myAudio.volume = 0.05;
-    return myAudio.play()
+    if (sound) {
+        var sonFaux = new Audio('assets/sound/notEnough.mp3')
+        sonFaux.volume = 0.05
+        return sonFaux.play()
+    }
 }
 
 document.getElementById("sound").addEventListener("click", () => {
-    setHalfVolume()
-    document.getElementById("buttonSound").src='assets/img/volume.png'
+    toggleSound()
 })
 
 function initElement() {
@@ -75,6 +78,16 @@ function reset() {
     localStorage.setItem("clicker_perseconde", perSecond)
 
     initElement()
+}
+
+function toggleSound() {
+    sound = !sound
+    buttonSoundElement.src = sound ? 'assets/img/volume.png' : 'assets/img/mute.png'
+
+    if (!sound)
+        myAudio.pause()
+    else
+        myAudio.play()
 }
 
 function changeCount(increment) {

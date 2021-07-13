@@ -40,11 +40,18 @@ i {
   box-sizing: border-box;
 }
 
-.all {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
+.button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.button button {
+  background-color: transparent;
+  border: none;
+}
+.button button img {
+  height: 30px;
+  width: auto;
 }
 
 body {
