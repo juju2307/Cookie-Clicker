@@ -7,10 +7,6 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  background-image: url(../img/encadrement.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 body {
@@ -24,15 +20,11 @@ body {
 #lapin {
   background-color: transparent;
   border: transparent;
+  cursor: url("../img/cursor.png"), pointer;
 }
 #lapin img {
   height: 30vh;
   width: auto;
-}
-
-.panneau {
-  height: 40vh;
-  justify-content: end;
 }
 
 /*# sourceMappingURL=style.css.map */
