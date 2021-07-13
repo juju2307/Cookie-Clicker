@@ -20,6 +20,36 @@ var multiplicatorLvlElement = document.getElementById("multiplicatorlvl")
 var autoclickLvlElement = document.getElementById("autoclicklvl")
 var crotteimgElement = document.getElementById("crotteimg")
 
+
+function sonTrue() {
+    var sonVrai = new Audio('assets/sound/enoughMoney.mp3')
+    sonVrai.volume = 0.05
+    return sonVrai.play()
+}
+
+function eat() {
+    var omNom = new Audio('assets/sound/eat.mp3')
+    omNom.volume = 0.05
+    return omNom.play()
+}
+
+function sonFalse() {
+    var sonFaux = new Audio('assets/sound/notEnough.mp3')
+    sonFaux.volume = 0.05
+    return sonFaux.play()
+}
+
+function setHalfVolume() {
+    var myAudio = document.getElementById("audio1");  
+    myAudio.volume = 0.05;
+    return myAudio.play()
+}
+
+document.getElementById("sound").addEventListener("click", () => {
+    setHalfVolume()
+    document.getElementById("buttonSound").src='assets/img/volume.png'
+})
+
 function initElement() {
     countElement.innerText = count
 
@@ -52,13 +82,13 @@ function changeCount(increment) {
     countElement.innerText = count
     localStorage.setItem("clicker_count", count)
 
-    if (count <= 5000) {
+    if (count <= 50) {
         crotteimgElement.src = "assets/img/stade-1.png"
-    } else if (count <= 15000) {
+    } else if (count <= 150) {
         crotteimgElement.src = "assets/img/stade-2.png"
-    } else if (count <= 50000) {
+    } else if (count <= 500) {
         crotteimgElement.src = "assets/img/stade-3.png"
-    } else if (count <= 100000) {
+    } else if (count <= 3000) {
         crotteimgElement.src = "assets/img/stade-4.png"
     } else {
         crotteimgElement.src = "assets/img/stade-5.png"
@@ -112,6 +142,7 @@ function sendmessage(message) {
 
 buttonLapinElement.addEventListener("click", () => {
     changeCount(isBonusActive ? perClick * multiplicator * 2 : perClick * multiplicator)
+    eat()
 })
 
 buttonMultiplicatorElement.addEventListener("click", () => {
@@ -121,8 +152,11 @@ buttonMultiplicatorElement.addEventListener("click", () => {
         changeMultiplicator(1)
         changeCount(-price)
         sendmessage("Good vous avez acheté le multiplicateur")
+        sonTrue()
+
     } else {
         sendmessage("Vous n'avez pas assez de crotte")
+        sonFalse()
     }
 })
 
@@ -133,8 +167,10 @@ buttonAutoclickElement.addEventListener("click", () => {
         changePerSecond(1)
         changeCount(-price)
         sendmessage("Good vous avez acheté le auto click")
+        sonTrue()
     } else {
         sendmessage("Vous n'avez pas assez de crotte")
+        sonFalse()
     }
 })
 
@@ -147,6 +183,7 @@ buttonBonusElement.addEventListener("click", () => {
     if (count >= bonusPrice) {
         changeCount(-bonusPrice)
         sendmessage("Good vous avez acheté le bonus")
+        sonTrue()
 
         isBonusActive = true
         bonusTimer = 30
@@ -161,6 +198,7 @@ buttonBonusElement.addEventListener("click", () => {
         }, 1000)
     } else {
         sendmessage("Vous n'avez pas assez de crotte")
+        sonFalse()
     }
 })
 
