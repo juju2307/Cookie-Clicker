@@ -94,14 +94,14 @@ body {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -25%);
+  transform: translate(-50%, -40%);
   background-color: transparent;
   border: transparent;
   cursor: url("../img/cursor.png"), pointer;
 }
 .game-wrapper .island-wrapper .island #lapin img {
   height: auto;
-  width: 20%;
+  width: 30%;
 }
 .game-wrapper .island-wrapper .island .island-img {
   width: 75%;
@@ -110,7 +110,7 @@ body {
 .game-wrapper .sheet-wrapper {
   flex: 0.45;
   min-height: calc(80vh - 160px);
-  padding: 80px 50px;
+  padding: 100px 50px;
   position: relative;
   color: #3E3E3E;
   display: flex;
