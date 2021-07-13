@@ -22,7 +22,7 @@ var crotteimgElement = document.getElementById("crotteimg")
 var buttonSoundElement = document.getElementById("buttonSound")
 var sound = false
 var myAudio = document.getElementById("audio1");
-myAudio.volume = 0.05;
+myAudio.volume = 0.15;
 
 
 function sonTrue() {
