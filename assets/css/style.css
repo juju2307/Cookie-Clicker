@@ -7,6 +7,10 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  background-image: url(../img/encadrement.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 body {

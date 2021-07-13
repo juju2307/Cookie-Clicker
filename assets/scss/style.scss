@@ -2,13 +2,15 @@
   box-sizing: border-box;
 }
 .all {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../img/encadrement.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
-
-
 
 body {
   background-image: url(../img/fond.jpg);
@@ -17,6 +19,7 @@ body {
   background-position: bottom;
   min-height: 100vh;
 }
+
 #lapin {
   background-color: transparent;
   border: transparent;
@@ -26,6 +29,6 @@ body {
   }
 }
 .panneau {
-  height: 40vh;
-  justify-content: end;
+    height: 40vh;
+    justify-content: end;
 }
