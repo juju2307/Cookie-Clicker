@@ -17,19 +17,19 @@ var buttonBonusElement = document.getElementById("bonusButton")
 
 function changeCount(increment) {
     count += increment
-    countElement.innerText = count > 1 ? count + " Carottes" : count + " Carotte"
+    countElement.innerText = count > 1 ? count + " Crottes" : count + " Crotte"
 }
 
 function changeMultiplicator(value) {
     multiplicator += value
-    buttonMultiplicatorElement.innerText = "Multiplicateur : " + calcMultiplicatorPrice() + " carotte"
+    buttonMultiplicatorElement.innerText = "Multiplicateur : " + calcMultiplicatorPrice() + " crotte"
     multiplicatorElement.innerText = "x" + multiplicator
 }
 
 function changePerSecond(value) {
     perSecond += value
-    buttonAutoclickElement.innerText = "AutoClick : " + calcAutoClickPrice() + " carotte"
-    perSecondElement.innerText = perSecond > 1 ? perSecond + " carottes par seconde" : perSecond + " carotte par seconde"
+    buttonAutoclickElement.innerText = "AutoClick : " + calcAutoClickPrice() + " crotte"
+    perSecondElement.innerText = perSecond > 1 ? perSecond + " crottes par seconde" : perSecond + " crotte par seconde"
 }
 
 function changeBonusTimer(increment) {
@@ -61,7 +61,7 @@ buttonMultiplicatorElement.addEventListener("click", () => {
         changeCount(-price)
         sendmessage("Good vous avez acheté le multiplicateur")
     } else {
-        sendmessage("Vous n'avez pas assez de carottes")
+        sendmessage("Vous n'avez pas assez de crotte")
     }
 })
 
@@ -73,7 +73,7 @@ buttonAutoclickElement.addEventListener("click", () => {
         changeCount(-price)
         sendmessage("Good vous avez acheté le auto click")
     } else {
-        sendmessage("Vous n'avez pas assez de carottes")
+        sendmessage("Vous n'avez pas assez de crotte")
     }
 })
 
@@ -93,7 +93,7 @@ buttonBonusElement.addEventListener("click", () => {
             }
         }, 1000)
     } else {
-        sendmessage("Vous n'avez pas assez de carottes")
+        sendmessage("Vous n'avez pas assez de crotte")
     }
 })
 
