@@ -8,6 +8,7 @@ Création d'un jeu de cookie-clicker en groupe (Elisandre, Adrien, Gaelle et Jul
 250 clics = possibilité d'utiliser "L'Auto-click"
 
 ## Aperçu de la page
+https://juju2307.github.io/Cookie-Clicker/
 
 ## Fonctionnalités
 * Bouton "Pierre Lapin" permettant d'amasser des crottes.
