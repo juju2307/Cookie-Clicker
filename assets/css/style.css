@@ -1,29 +1,19 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .all {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-image: url(/assets/img/encadrement.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  justify-content: space-between;
+  align-items: center;
 }
 
 body {
-  background-image: url(/assets/img/fond.jpg);
+  background-image: url(../img/fond.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
   min-height: 100vh;
 }
 
@@ -31,7 +21,6 @@ body {
   background-color: transparent;
   border: transparent;
 }
-
 #lapin img {
   height: 30vh;
   width: auto;
@@ -39,8 +28,7 @@ body {
 
 .panneau {
   height: 40vh;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  justify-content: end;
 }
+
 /*# sourceMappingURL=style.css.map */
