@@ -28,7 +28,7 @@ myAudio.volume = 0.15;
 function sonTrue() {
     if (sound) {
         var sonVrai = new Audio('assets/sound/enoughMoney.mp3')
-        sonVrai.volume = 0.05
+        sonVrai.volume = 0.08
         return sonVrai.play()
     }
 }
@@ -36,7 +36,7 @@ function sonTrue() {
 function eat() {
     if (sound) {
         var omNom = new Audio('assets/sound/eat.mp3')
-        omNom.volume = 0.05
+        omNom.volume = 0.08
         return omNom.play()
     }
 }
@@ -44,7 +44,7 @@ function eat() {
 function sonFalse() {
     if (sound) {
         var sonFaux = new Audio('assets/sound/notEnough.mp3')
-        sonFaux.volume = 0.05
+        sonFaux.volume = 0.08
         return sonFaux.play()
     }
 }
