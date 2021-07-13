@@ -90,6 +90,11 @@ function calcAutoClickPrice () {
 
 function sendmessage(message) {
     messageElement.innerText = message
+
+    setTimeout(() => {
+        if (messageElement.innerText === message)
+            messageElement.innerText = ""
+    }, 3000)
 }
 
 buttonLapinElement.addEventListener("click", () => {

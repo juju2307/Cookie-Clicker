@@ -101,7 +101,7 @@ body {
 }
 .game-wrapper .island-wrapper .island #lapin img {
   height: auto;
-  width: 30%;
+  width: 100px;
 }
 .game-wrapper .island-wrapper .island .island-img {
   width: 75%;
@@ -200,7 +200,7 @@ body {
     margin-top: 20vh;
   }
   .game-wrapper .island-wrapper .island #lapin img {
-    width: 10%;
+    width: 100px;
   }
   .game-wrapper .island-wrapper .island .island-img {
     width: 40%;
@@ -225,7 +225,7 @@ body {
     margin-top: 20vh;
   }
   .game-wrapper .island-wrapper .island #lapin img {
-    width: 15%;
+    width: 80px;
   }
   .game-wrapper .island-wrapper .island .island-img {
     width: 50%;
