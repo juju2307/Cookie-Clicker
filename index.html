@@ -8,29 +8,70 @@
     <title>Cookie Clicker</title>
 </head>
 <body>
-    <div class="all">
-        <div class="pinou">
-            <button id="lapin">
-                <img src="assets/img/pierre2.png" alt="Pierre Lapin" width="1239" height="2477">
-            </button>
+    <img class="sun" src="assets/img/sun.png" alt="sun">
+    <p id="message"></p>
+    <div class="game-wrapper">
+        <div class="island-wrapper">
+            <div class="island">
+                <button id="lapin">
+                    <img src="assets/img/pierre2.png" alt="Pierre Lapin" width="1239" height="2477">
+                </button>
+                <img class="island-img" src="assets/img/island.png" alt="sun">
+            </div>
         </div>
 
-        <div class="divPanneau">
-            <p id="count">0 Crotte</p>
-            <p id="multiplicator">x1</p>
-            <p id="bonusTimer">00</p>
-            <p id="perSecond">0 Crotte par seconde</p>
-            <p id="message"></p>
-            
-            <button id="multiplicatorButton">
-                Multiplicateur : 50 crottes
-            </button>
-            <button id="autoclickButton">
-                AutoClick : 250 crottes
-            </button>
-            <button id="bonusButton">
-                Bonus : 2500 crottes
-            </button>
+        <div class="sheet-wrapper">
+            <div class="game-data">
+                <div class="data">
+                    <p><span id="count">0</span> Crotte</p>
+
+                    <div>
+                        <p>Multiplicateur <span id="multiplicator">x1</span></p>
+                        <p><span id="perSecond">0</span> Crottes/s</p>
+                    </div>
+
+                    <p>Bonus <span id="bonusTimer">30</span>s</p>
+                </div>
+
+                <div class="store">
+                    <div class="item">
+                        <div class="item-header">
+                            <p class="name">Multiplicateur</p>
+                            <p class="lvl" id="multiplicatorlvl">1</p>
+                        </div>
+                        <div class="item-button">
+                            <button id="multiplicatorButton">
+                                Améliorer pour 50 Crottes
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-header">
+                            <p class="name">AutoClick</p>
+                            <p class="lvl" id="autoclicklvl">1</p>
+                        </div>
+                        <div class="item-button">
+                            <button id="autoclickButton">
+                                Améliorer pour 250 Crottes
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-header">
+                            <p class="name">Bonus</p>
+                        </div>
+                        <div class="item-button">
+                            <button id="bonusButton">
+                                Améliorer pour 2500 Crottes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img class="sheet" src="assets/img/background_sheet.png" alt="sheet">
         </div>
     </div>
 

@@ -5,6 +5,9 @@ var perClick = 1
 var bonusPrice = 2500
 var isBonusActive = false
 var bonusTimer = 0
+var multiplicatorLvl = 1
+var autoclickLvl = 1
+var bonusTimer = 0
 var countElement = document.getElementById("count")
 var messageElement = document.getElementById("message")
 var multiplicatorElement = document.getElementById("multiplicator")
@@ -14,22 +17,28 @@ var buttonLapinElement = document.getElementById("lapin")
 var buttonMultiplicatorElement = document.getElementById("multiplicatorButton")
 var buttonAutoclickElement = document.getElementById("autoclickButton")
 var buttonBonusElement = document.getElementById("bonusButton")
+var multiplicatorLvlElement = document.getElementById("multiplicatorlvl")
+var autoclickLvlElement = document.getElementById("autoclicklvl")
 
 function changeCount(increment) {
     count += increment
-    countElement.innerText = count > 1 ? count + " Crottes" : count + " Crotte"
+    countElement.innerText = count
 }
 
 function changeMultiplicator(value) {
+    multiplicatorLvl++
     multiplicator += value
     buttonMultiplicatorElement.innerText = "Multiplicateur : " + calcMultiplicatorPrice() + " crotte"
     multiplicatorElement.innerText = "x" + multiplicator
+    multiplicatorLvlElement.innerText = multiplicatorLvl
 }
 
 function changePerSecond(value) {
+    autoclickLvl++
     perSecond += value
     buttonAutoclickElement.innerText = "AutoClick : " + calcAutoClickPrice() + " crotte"
-    perSecondElement.innerText = perSecond > 1 ? perSecond + " crottes par seconde" : perSecond + " crotte par seconde"
+    perSecondElement.innerText = perSecond
+    autoclickLvlElement.innerText = autoclickLvl
 }
 
 function changeBonusTimer(increment) {
@@ -85,11 +94,12 @@ buttonBonusElement.addEventListener("click", () => {
         isBonusActive = true
         bonusTimer = 30
 
-        setInterval(() => {
+        let interval = setInterval(() => {
             changeBonusTimer(-1)
 
             if (bonusTimer === 0) {
                 isBonusActive = false
+                window.clearInterval(interval)
             }
         }, 1000)
     } else {

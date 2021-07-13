@@ -1,3 +1,41 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, input, textarea, p, blockquote, th, td {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-weight: 100;
+}
+
+i {
+  display: flex;
+  align-items: center;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -10,21 +48,219 @@
 }
 
 body {
-  background-image: url(../img/fond.jpg);
+  background-image: url(../img/fond.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
   min-height: 100vh;
 }
 
-#lapin {
+.sun {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  height: 200px;
+  height: 200px;
+}
+
+#message {
+  position: absolute;
+  top: 25px;
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.game-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 80%;
+  margin: auto;
+}
+.game-wrapper .island-wrapper {
+  flex: 0.35;
+}
+.game-wrapper .island-wrapper .island {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-wrapper .island-wrapper .island #lapin {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -25%);
   background-color: transparent;
   border: transparent;
   cursor: url("../img/cursor.png"), pointer;
 }
-#lapin img {
-  height: 30vh;
-  width: auto;
+.game-wrapper .island-wrapper .island #lapin img {
+  height: auto;
+  width: 20%;
+}
+.game-wrapper .island-wrapper .island .island-img {
+  width: 75%;
+  height: auto;
+}
+.game-wrapper .sheet-wrapper {
+  flex: 0.45;
+  min-height: calc(80vh - 160px);
+  padding: 80px 50px;
+  position: relative;
+  color: #3E3E3E;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.game-wrapper .sheet-wrapper .game-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: row wrap;
+}
+.game-wrapper .sheet-wrapper .game-data .data {
+  flex: 0.3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+  text-align: center;
+  font-size: 24px;
+  height: 100%;
+}
+.game-wrapper .sheet-wrapper .game-data .data span {
+  font-weight: bold;
+  color: #617E36;
+}
+.game-wrapper .sheet-wrapper .game-data .store {
+  flex: 0.7;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-flow: row wrap;
+}
+.game-wrapper .sheet-wrapper .game-data .store .item:not(:first-child) {
+  margin-top: 10px;
+}
+.game-wrapper .sheet-wrapper .game-data .store .item {
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #95735E;
+  color: white;
+}
+.game-wrapper .sheet-wrapper .game-data .store .item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.game-wrapper .sheet-wrapper .game-data .store .item-header .lvl {
+  border-radius: 5px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E7C29B;
+  color: #3E3E3E;
+}
+.game-wrapper .sheet-wrapper .game-data .store .item-button button {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  background-color: #A9E058;
+  border: none;
+  padding: 8px 5px;
+  border-radius: 5px;
+  font-size: 13px;
+  transition: background-color 0.3s ease-in-out;
+}
+.game-wrapper .sheet-wrapper .game-data .store .item-button button:hover {
+  background-color: #93d82d;
+}
+.game-wrapper .sheet-wrapper .sheet {
+  object-fit: contain;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+@media screen and (max-width: 1320px) {
+  .game-wrapper .island-wrapper, .game-wrapper .sheet-wrapper {
+    flex-basis: 100%;
+  }
+  .game-wrapper .island-wrapper {
+    margin-top: 20vh;
+  }
+  .game-wrapper .island-wrapper .island #lapin img {
+    width: 10%;
+  }
+  .game-wrapper .island-wrapper .island .island-img {
+    width: 40%;
+  }
+  .game-wrapper .sheet-wrapper {
+    margin-top: 40px;
+  }
+  .game-wrapper .sheet-wrapper .game-data {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 830px) {
+  .game-wrapper .sheet-wrapper {
+    margin-top: 40px;
+  }
+  .game-wrapper .sheet-wrapper .game-data {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 720px) {
+  .game-wrapper .island-wrapper {
+    margin-top: 20vh;
+  }
+  .game-wrapper .island-wrapper .island #lapin img {
+    width: 15%;
+  }
+  .game-wrapper .island-wrapper .island .island-img {
+    width: 50%;
+  }
+  .game-wrapper .sheet-wrapper {
+    margin-top: 40px;
+    background-color: #f1dfce;
+    border: 3px solid #e7c19b;
+    border-radius: 5px;
+    padding: 40px 20px;
+    height: auto;
+    display: block;
+  }
+  .game-wrapper .sheet-wrapper .sheet {
+    display: none;
+  }
+  .game-wrapper .sheet-wrapper .game-data {
+    display: block;
+    margin-top: 0;
+  }
+  .game-wrapper .sheet-wrapper .game-data .data {
+    flex-basis: auto;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 35px;
+  }
+  .game-wrapper .sheet-wrapper .game-data .store {
+    flex-basis: 100%;
+    display: block;
+    width: 100%;
+  }
+  .game-wrapper .sheet-wrapper .game-data .store .item {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
